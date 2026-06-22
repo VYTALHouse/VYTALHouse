@@ -23,19 +23,24 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
 
   const absolutePath = path.join(process.cwd(), relativePath);
   const markdown = await fs.readFile(absolutePath, "utf8");
+  const title = relativePath
+    .replace("docs/", "")
+    .replace(".md", "")
+    .replace(/^\d+_/, "")
+    .replaceAll("_", " ");
 
   return (
     <main className="page-shell">
       <Nav />
       <section className="section">
         <p className="eyebrow">VYTAL House document vault</p>
-        <h1>{relativePath.replace("docs/", "").replace(".md", "").replaceAll("_", " ")}</h1>
-        <p className="hero-copy">Rendered from the local repository allowlist. Draft materials remain subject to professional review.</p>
+        <h1>{title}</h1>
+        <p className="muted">
+          Rendered from the local repository allowlist. Draft materials are subject to professional review.
+        </p>
       </section>
       <section className="section">
-        <article className="wide-panel">
-          <pre className="doc-pre">{markdown}</pre>
-        </article>
+        <pre className="doc-pre">{markdown}</pre>
       </section>
       <Footer />
     </main>
