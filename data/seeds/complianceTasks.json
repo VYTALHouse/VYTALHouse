@@ -1,0 +1,14 @@
+[
+  {
+    "id": "complianceTasks-1",
+    "entity": "VYTAL House",
+    "type": "complianceTasks",
+    "name": "Sample complianceTasks",
+    "status": "draft",
+    "owner": "admin",
+    "updatedAt": "2026-06-22",
+    "metadata": {
+      "description": "Auto-generated seed record"
+    }
+  }
+]

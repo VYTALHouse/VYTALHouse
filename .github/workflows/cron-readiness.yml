@@ -1,0 +1,13 @@
+name: Cron Readiness Check
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Calculate readiness
+      run: echo "Evaluating VYTAL House facility readiness score..."

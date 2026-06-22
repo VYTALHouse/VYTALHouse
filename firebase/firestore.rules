@@ -1,82 +1,70 @@
 rules_version = '2';
+
 service cloud.firestore {
   match /databases/{database}/documents {
-    function signedIn() { return request.auth != null; }
-    function role() { return signedIn() ? request.auth.token.role : "public"; }
-    function isOwnerOrAdmin() { return role() in ["owner", "admin"]; }
-    function isClinical() { return role() in ["owner", "clinical"]; }
-    function isOps() { return role() in ["owner", "admin", "operations"]; }
-    function isMarketing() { return role() in ["owner", "admin", "marketing"]; }
-    function hasSevenFields() {
-      return request.resource.data.keys().hasAll(["id", "entity", "type", "name", "status", "owner", "updatedAt"]) &&
-        request.resource.data.entity == "VYTAL House";
+    // VYTAL House specific roles: owner, admin, operations, clinical, marketing, vendor, member
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function getUserRole() {
+      return request.auth.token.role;
     }
 
-    match /services/{id} {
-      allow read: if true;
-      allow write: if isOwnerOrAdmin() && hasSevenFields();
+    function isOwner() {
+      return isAuthenticated() && getUserRole() == 'owner';
     }
-    match /memberships/{id} {
-      allow read: if true;
-      allow write: if isOwnerOrAdmin() && hasSevenFields();
+
+    function isAdmin() {
+      return isAuthenticated() && (getUserRole() == 'owner' || getUserRole() == 'admin');
     }
-    match /vendors/{id} {
-      allow read, write: if isOps() && hasSevenFields();
+
+    function isClinical() {
+      return isAuthenticated() && (isAdmin() || getUserRole() == 'clinical');
     }
-    match /bookings/{id} {
-      allow read: if signedIn();
-      allow write: if (role() in ["owner", "admin", "operations", "member"]) && hasSevenFields();
+
+    function isOperations() {
+      return isAuthenticated() && (isAdmin() || getUserRole() == 'operations');
     }
-    match /members/{id} {
-      allow read, write: if isOwnerOrAdmin() && hasSevenFields();
+    
+    function isMarketing() {
+      return isAuthenticated() && (isAdmin() || getUserRole() == 'marketing');
     }
-    match /contentItems/{id} {
-      allow read: if true;
-      allow write: if role() in ["owner", "admin", "marketing"] && hasSevenFields();
+
+    function isVendor() {
+      return isAuthenticated() && getUserRole() == 'vendor';
     }
-    match /leads/{id} {
-      allow create: if hasSevenFields();
-      allow read, update, delete: if role() in ["owner", "admin", "marketing"];
+
+    function isMember() {
+      return isAuthenticated() && getUserRole() == 'member';
     }
-    match /auditEvents/{id} {
-      allow read: if isOwnerOrAdmin();
-      allow create: if signedIn() && hasSevenFields();
-      allow update, delete: if false;
+
+    // Protect all health/clinical data
+    match /clinical_intake/{document=**} {
+      allow read, write: if isClinical();
     }
-    match /qualityScores/{id} {
-      allow read: if isOwnerOrAdmin();
-      allow write: if isOwnerOrAdmin() && hasSevenFields();
+
+    // Portal data
+    match /portal/{document=**} {
+      allow read, write: if isAdmin();
     }
-    match /locations/{id} {
-      allow read: if true;
-      allow write: if isOps() && hasSevenFields();
+
+    // Memberships
+    match /memberships/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isOperations();
     }
-    match /launchGoals/{id} {
-      allow read: if signedIn();
-      allow write: if isOps() && hasSevenFields();
+
+    // Vendors
+    match /vendors/{document=**} {
+      allow read: if isOperations() || isVendor();
+      allow write: if isOperations();
     }
-    match /riskRegister/{id} {
-      allow read: if role() in ["owner", "admin", "operations", "clinical", "marketing"];
-      allow write: if isOwnerOrAdmin() && hasSevenFields();
-    }
-    match /integrationReadiness/{id} {
-      allow read: if isOwnerOrAdmin();
-      allow write: if isOwnerOrAdmin() && hasSevenFields();
-    }
-    match /portalUsers/{id} {
-      allow read: if isOwnerOrAdmin();
-      allow write: if false;
-    }
-    match /portalSessions/{id} {
+
+    // Fallback block everything else by default
+    match /{document=**} {
       allow read, write: if false;
-    }
-    match /documents/{id} {
-      allow read: if isOwnerOrAdmin() || isClinical();
-      allow write: if isOwnerOrAdmin() && hasSevenFields();
-    }
-    match /socialPosts/{id} {
-      allow read: if signedIn();
-      allow write: if isMarketing() && hasSevenFields();
     }
   }
 }

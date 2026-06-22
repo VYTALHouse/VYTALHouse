@@ -1,0 +1,14 @@
+[
+  {
+    "id": "capitalReadiness-1",
+    "entity": "VYTAL House",
+    "type": "capitalReadiness",
+    "name": "Sample capitalReadiness",
+    "status": "draft",
+    "owner": "admin",
+    "updatedAt": "2026-06-22",
+    "metadata": {
+      "description": "Auto-generated seed record"
+    }
+  }
+]

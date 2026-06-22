@@ -1,6 +1,7 @@
-import { initializeApp, getApps, type FirebaseApp } from "firebase/app";
-import { getAuth, type Auth } from "firebase/auth";
-import { getFirestore, type Firestore } from "firebase/firestore";
+import { initializeApp, getApps, getApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -8,24 +9,18 @@ const firebaseConfig = {
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-export function hasFirebaseConfig(): boolean {
-  return Object.values(firebaseConfig).every(Boolean);
-}
+const ENABLE_FIREBASE = process.env.VYTAL_ENABLE_FIREBASE === "true";
 
-export function getFirebaseApp(): FirebaseApp | null {
-  if (!hasFirebaseConfig()) return null;
-  return getApps()[0] ?? initializeApp(firebaseConfig);
-}
+// Initialize Firebase only if explicitly enabled
+const app = ENABLE_FIREBASE && getApps().length === 0 ? initializeApp(firebaseConfig) : (ENABLE_FIREBASE ? getApp() : null);
 
-export function getVytalFirestore(): Firestore | null {
-  const app = getFirebaseApp();
-  return app ? getFirestore(app) : null;
-}
+export const db = app ? getFirestore(app) : null;
+export const auth = app ? getAuth(app) : null;
+export const storage = app ? getStorage(app) : null;
 
-export function getVytalAuth(): Auth | null {
-  const app = getFirebaseApp();
-  return app ? getAuth(app) : null;
-}
+export const isFirebaseReady = () => {
+  return app !== null;
+};

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "permitsAndReview-1",
+    "entity": "VYTAL House",
+    "type": "permitsAndReview",
+    "name": "Sample permitsAndReview",
+    "status": "draft",
+    "owner": "admin",
+    "updatedAt": "2026-06-22",
+    "metadata": {
+      "description": "Auto-generated seed record"
+    }
+  }
+]

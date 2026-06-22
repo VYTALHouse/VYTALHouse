@@ -1,19 +1,34 @@
 rules_version = '2';
+
 service firebase.storage {
   match /b/{bucket}/o {
-    match /vytal/documents/{allPaths=**} {
-      allow read: if request.auth != null && request.auth.token.role in ["owner", "admin", "operations", "clinical"];
-      allow write: if request.auth != null && request.auth.token.role in ["owner", "admin"];
+    function isAuthenticated() {
+      return request.auth != null;
     }
-    match /vytal/operations/{allPaths=**} {
-      allow read, write: if request.auth != null && request.auth.token.role in ["owner", "admin", "operations"];
+    
+    function getUserRole() {
+      return request.auth.token.role;
     }
-    match /vytal/public/{allPaths=**} {
+
+    function isAdmin() {
+      return isAuthenticated() && (getUserRole() == 'owner' || getUserRole() == 'admin');
+    }
+
+    match /public/{allPaths=**} {
       allow read: if true;
-      allow write: if request.auth != null && request.auth.token.role in ["owner", "admin", "marketing"];
+      allow write: if isAdmin();
     }
-    match /vytal/{allPaths=**} {
-      allow read, write: if request.auth != null && request.auth.token.role in ["owner", "admin"];
+
+    match /clinical/{allPaths=**} {
+      allow read, write: if isAuthenticated() && (isAdmin() || getUserRole() == 'clinical');
+    }
+
+    match /legal/{allPaths=**} {
+      allow read, write: if isAdmin();
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
     }
   }
 }

@@ -11,7 +11,7 @@
 - Workbook formula scan passed.
 - Deck montage exists.
 - Playwright visual check passed.
-- App surface count OK: 9 TSX files.
+- App surface count OK: 12 TSX files.
 
 ## External State
 - No live Notion creation performed.
@@ -19,4 +19,4 @@
 - No vendor email sent.
 - No payment processing enabled.
 - No legal filing submitted.
-- No GitHub remote push performed.
+- No Firebase or Google Cloud resource creation performed.

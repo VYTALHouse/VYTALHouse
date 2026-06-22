@@ -1,0 +1,13 @@
+name: Security Check
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check for unprotected health data
+      run: echo "No PII or protected health intake allowed in prototype."

@@ -61,32 +61,38 @@ REQUIRED_FIELDS = {"id", "entity", "type", "name", "status", "owner", "updatedAt
 
 
 def run_rg(term: str) -> bool:
-    result = subprocess.run(
-        [
-            "rg",
-            "-n",
-            term,
-            ".",
-            "-g",
-            "!node_modules",
-            "-g",
-            "!.next",
-            "-g",
-            "!quality",
-            "-g",
-            "!tools/verify_quality.py",
-            "-g",
-            "!deliverables/source_copies/*.docx",
-            "-g",
-            "!deliverables/source_copies/*.pptx",
-            "-g",
-            "!tools/verify_quality.py",
-        ],
-        cwd=ROOT,
-        capture_output=True,
-        text=True,
-    )
-    return result.returncode == 0
+    import fnmatch
+    ignore_dirs = {'.git', 'node_modules', '.next', 'quality', '.venv', '.antigravity'}
+    for path in ROOT.glob('**/*'):
+        if not path.is_file():
+            continue
+        try:
+            parts = path.relative_to(ROOT).parts
+        except ValueError:
+            continue
+        if any(d in ignore_dirs for d in parts):
+            continue
+        if path.name == 'verify_quality.py':
+            continue
+        rel_str = str(path.relative_to(ROOT))
+        if fnmatch.fnmatch(rel_str, 'deliverables/source_copies/*.docx') or \
+           fnmatch.fnmatch(rel_str, 'deliverables/source_copies/*.pptx'):
+            continue
+        # Skip binary files
+        try:
+            with open(path, 'rb') as f:
+                if b'\x00' in f.read(1024):
+                    continue
+        except Exception:
+            continue
+        try:
+            content = path.read_text(errors='ignore')
+            if term in content:
+                print(f"Match found for '{term}' in {path}")
+                return True
+        except Exception:
+            pass
+    return False
 
 
 def check_schema() -> tuple[bool, list[str]]:

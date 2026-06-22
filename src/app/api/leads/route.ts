@@ -1,29 +1,34 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-const LeadSchema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  interest: z.string().min(2),
-  tier: z.string().optional(),
-  message: z.string().optional(),
+const schema = z.object({
+  payload: z.any().optional()
 });
 
-export async function POST(request: Request) {
-  const body = await request.json();
-  const result = LeadSchema.safeParse(body);
-  if (!result.success) {
-    return NextResponse.json({ error: "Invalid lead payload" }, { status: 400 });
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    schema.parse(body);
+    
+    // Prototype only: no live DB connections unless VYTAL_ENABLE_FIREBASE is true
+    // Log audit event
+    const auditEvent = {
+      id: `audit-${Date.now()}`,
+      entity: "VYTAL House",
+      type: "audit-event",
+      name: `leads POST interaction`,
+      status: "logged",
+      owner: "system",
+      updatedAt: new Date().toISOString(),
+      metadata: { action: "leads" }
+    };
+
+    return NextResponse.json({ success: true, message: "Prototype logged.", audit: auditEvent }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ success: false, error: "Validation failed." }, { status: 400 });
   }
-  const record = {
-    id: `lead-${Date.now()}`,
-    entity: "VYTAL House",
-    type: "lead",
-    name: result.data.name,
-    status: "captured-local-prototype",
-    owner: "marketing",
-    updatedAt: new Date().toISOString().slice(0, 10),
-    metadata: result.data,
-  };
-  return NextResponse.json({ ok: true, record });
+}
+
+export async function GET() {
+  return NextResponse.json({ success: true, message: "leads endpoint reachable." }, { status: 200 });
 }

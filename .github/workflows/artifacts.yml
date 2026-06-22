@@ -1,0 +1,13 @@
+name: Artifacts
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  artifacts:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Collect artifacts
+      run: echo "Collecting delivery artifacts for VYTAL House prototype..."

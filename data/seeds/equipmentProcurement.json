@@ -1,0 +1,14 @@
+[
+  {
+    "id": "equipmentProcurement-1",
+    "entity": "VYTAL House",
+    "type": "equipmentProcurement",
+    "name": "Sample equipmentProcurement",
+    "status": "draft",
+    "owner": "admin",
+    "updatedAt": "2026-06-22",
+    "metadata": {
+      "description": "Auto-generated seed record"
+    }
+  }
+]
