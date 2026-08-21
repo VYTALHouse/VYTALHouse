@@ -8,7 +8,7 @@ import { serviceRecords } from "@/lib/data";
 export const metadata = {
   title: "Facility — VYTAL House",
   description:
-    "Conceptual facility layout for VYTAL House at 6000 Merriweather Drive, Columbia, MD. Recovery zones, service lanes, and CAD handoff reference.",
+    "Conceptual facility layout for VYTAL House at 9017 Mendenhall Court, Suite F, Columbia, MD. Recovery zones, service lanes, and CAD handoff reference.",
 };
 
 const zones = [
@@ -28,10 +28,10 @@ export default function FacilityPage() {
       <Nav />
 
       <section className="section">
-        <p className="eyebrow">6000 Merriweather Drive, Columbia MD 21044</p>
+        <p className="eyebrow">9017 Mendenhall Court, Suite F, Columbia MD 21045</p>
         <h1>Facility Vision</h1>
         <p className="hero-copy">
-          Conceptual 6,925 SF operating map. Lease, zoning, utilities, permits, and tenant improvements
+          Conceptual approximately 6,400 RSF operating map. Lease, zoning, utilities, permits, and tenant improvements
           remain approval-gated before commitment.
         </p>
         <div className="hero-actions">

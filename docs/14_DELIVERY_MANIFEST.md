@@ -4,7 +4,7 @@
 - Numbered docs package (including SBA 7(a) loan preparation, SBA 8(a) certification, Micro-grants, ownership & formation stack, and operations & compliance stack).
 - Next/Firebase MVP scaffold with a newly added custom Ownership Dashboard.
 - Local role login and command portal for project-ready review.
-- Target location record for 6000 Merriweather Drive, Columbia, MD 21044.
+- Target location record for 9017 Mendenhall Court, Suite F, Columbia, MD 21045.
 - Firebase and Google Cloud readiness manifest.
 - Seed data.
 - Firebase rules and indexes.

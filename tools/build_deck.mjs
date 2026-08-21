@@ -26,11 +26,11 @@ const palette = {
 };
 
 const slides = [
-  ["VYTAL House", "Recharge. Recover. Evolve.", ["A premium Maryland recovery and wellness club.", "Target site: 6000 Merriweather Drive, Columbia, MD 21044.", "Owned by Chauncey Gardner and Kathy Ha.", "Local draft package with external actions gated."]],
+  ["VYTAL House", "Recharge. Recover. Evolve.", ["A premium Maryland recovery and wellness club.", "Target site: 9017 Mendenhall Court, Suite F, Columbia, MD 21045.", "Owned by Chauncey Gardner and Kathy Ha.", "Local draft package with external actions gated."]],
   ["Vision", "A spacecraft-inspired recovery lounge.", ["Dark cinematic ambience with chrome and warm gold.", "Clinical-grade modalities and concierge operations.", "Membership-led model with high-margin add-ons."]],
   ["Services", "The therapy system.", ["Hyperbaric oxygen therapy.", "IV and NAD+ lounge.", "Red light, cryotherapy, sauna, cold plunge, float, and compression."]],
   ["Memberships", "Core, Elite, and Black.", ["Core: $299/month.", "Elite: $599/month.", "Black: $1,499/month.", "Target membership MRR: $179,700."]],
-  ["Facility", "Conceptual 6,925 SF operating map.", ["Target location: 6000 Merriweather Drive.", "Reception and retail.", "IV/NAD lounge.", "Consult rooms.", "Cryotherapy, red light, sauna/cold plunge, recovery zone."]],
+  ["Facility", "Conceptual approximately 6,400 RSF operating map.", ["Target location: 9017 Mendenhall Court, Suite F.", "Reception and retail.", "IV/NAD lounge.", "Consult rooms.", "Cryotherapy, red light, sauna/cold plunge, recovery zone."]],
   ["Technology", "Next.js, Firebase, and governed records.", ["Public website.", "Local role login.", "Command portal.", "Member app/PWA.", "Admin dashboard.", "Vendor CRM and content calendar."]],
   ["Vendor Path", "Quote-first procurement.", ["Oxycell.", "Oxygen Health Systems.", "VacuActiv.", "EleveHealth.", "No outreach sent without approval."]],
   ["Governance", "7-field schema and separation of duties.", ["Every record has id, entity, type, name, status, owner, updatedAt.", "Medical, legal, financial, payment, Figma, and Notion gates remain controlled."]],

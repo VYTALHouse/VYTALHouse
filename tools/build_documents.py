@@ -108,7 +108,7 @@ def build_dossier() -> Path:
         doc,
         [
             "Brand is locked to VYTAL House, the tagline Recharge. Recover. Evolve., and owners Chauncey Gardner and Kathy Ha.",
-            "Target flagship location is 6000 Merriweather Drive, Columbia, MD 21044, pending lease, zoning, utilities, permits, and professional review.",
+            "Target flagship location is 9017 Mendenhall Court, Suite F, Columbia, MD 21045, pending lease, zoning, utilities, permits, and professional review.",
             "The software MVP uses Next.js, React, Firebase-ready rules, seeded records, and safe prototype forms.",
             "The command portal adds local role login for owner, admin, clinical, operations, marketing, vendor, and member review.",
             "The operating package includes Notion importables, Figma tokens, vendor outreach, social calendar, source manifest, and delivery manifest.",
@@ -133,7 +133,7 @@ def build_dossier() -> Path:
         doc,
         ["Service", "Purpose", "Gate"],
         [
-            ["Target Location", "6000 Merriweather Drive, Columbia, MD 21044", "Lease and zoning review"],
+            ["Target Location", "9017 Mendenhall Court, Suite F, Columbia, MD 21045", "Lease and zoning review"],
             ["Hyperbaric Oxygen Therapy", "Anchor clinical recovery modality", "Clinical review"],
             ["IV and NAD+ Lounge", "High-touch lounge treatment flow", "Medical director review"],
             ["Red Light Therapy", "Photobiomodulation and recovery", "Protocol review"],
@@ -225,14 +225,14 @@ def build_business_plan() -> Path:
     add_heading(doc, "Executive Summary")
     add_body(
         doc,
-        "VYTAL House is a premium recovery and wellness club for high-performance members in Maryland. The target flagship location is 6000 Merriweather Drive, Columbia, MD 21044, pending lease, zoning, utilities, permits, and professional review. The concept combines clinical-grade recovery modalities, a recurring membership model, concierge operations, and a dark cinematic lounge experience.",
+        "VYTAL House is a premium recovery and wellness club for high-performance members in Maryland. The target flagship location is 9017 Mendenhall Court, Suite F, Columbia, MD 21045, pending lease, zoning, utilities, permits, and professional review. The concept combines clinical-grade recovery modalities, a recurring membership model, concierge operations, and a dark cinematic lounge experience.",
     )
     add_bullets(
         doc,
         [
             "Brand: VYTAL House only.",
             "Owners: Chauncey Gardner and Kathy Ha.",
-            "Target site: 6000 Merriweather Drive, Columbia, MD 21044.",
+            "Target site: 9017 Mendenhall Court, Suite F, Columbia, MD 21045.",
             "Promise: Recharge. Recover. Evolve.",
             "Guardrails: no live payments, no protected health information, no vendor sending, and no legal filing without explicit approval.",
         ],
@@ -244,7 +244,7 @@ def build_business_plan() -> Path:
         ["Dimension", "Plan"],
         [
             ["Category", "Recovery, longevity, and wellness club"],
-            ["Target location", "6000 Merriweather Drive, Columbia, MD 21044"],
+            ["Target location", "9017 Mendenhall Court, Suite F, Columbia, MD 21045"],
             ["Primary users", "Founders, artists, athletes, executives, wellness clients, and recovery-focused members"],
             ["Differentiator", "Design-forward facility, recurring membership revenue, clinical oversight, and high-touch concierge flow"],
             ["Experience", "Private, cinematic, quiet, and operationally controlled"],
@@ -338,7 +338,7 @@ def build_brd() -> Path:
         doc,
         [
             "Public website for brand, services, memberships, facility concept, and contact.",
-            "Location record for 6000 Merriweather Drive, Columbia, MD 21044.",
+            "Location record for 9017 Mendenhall Court, Suite F, Columbia, MD 21045.",
             "Local prototype login and command portal for role-filtered project review.",
             "Member app surface for seeded bookings, session requests, education, and membership context.",
             "Admin dashboard for launch readiness, quality scoring, leads, bookings, vendors, content, and documents.",
@@ -451,7 +451,7 @@ def build_articles_draft() -> Path:
         ["Field", "Status", "Control"],
         [
             ["Entity names and availability", "To confirm", "Owner and counsel review"],
-            ["Target operating location", "6000 Merriweather Drive, Columbia, MD 21044", "Lease, zoning, and counsel review"],
+            ["Target operating location", "9017 Mendenhall Court, Suite F, Columbia, MD 21045", "Lease, zoning, and counsel review"],
             ["Principal Maryland office addresses", "To confirm", "Do not publish until approved"],
             ["Resident agent name and physical Maryland address", "To confirm", "Resident agent consent required"],
             ["Organizer signatures", "To confirm", "Owner approval required"],

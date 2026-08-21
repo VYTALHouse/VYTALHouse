@@ -8,7 +8,7 @@
 - Codex pasted attachment describing the copied desktop package and GitHub push.
 
 ## Imported Into This Repo
-- Target location: 6000 Merriweather Drive, Columbia, MD 21044.
+- Target location: 9017 Mendenhall Court, Suite F, Columbia, MD 21045.
 - Launch goals from the max launch checklist.
 - Risk register controls for medical claims, equipment delays, data breach, and founder deadlock.
 - Firebase, Google Cloud file vault, GitHub, Notion, and Figma readiness records.

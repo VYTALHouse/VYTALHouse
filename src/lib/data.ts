@@ -26,7 +26,7 @@ export const brand = {
   tagline: "Recharge. Recover. Evolve.",
   legalDraftName: "VYTAL House LLC",
   owners: "Chauncey Gardner and Kathy Ha",
-  targetAddress: "6000 Merriweather Drive, Columbia, MD 21044",
+  targetAddress: "9017 Mendenhall Court, Suite F, Columbia, MD 21045",
   description:
     "A premium recovery and wellness club combining clinical-grade modalities with a dark, spacecraft-inspired member experience at the target Columbia, Maryland flagship site.",
 };

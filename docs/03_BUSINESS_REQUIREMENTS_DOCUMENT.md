@@ -4,7 +4,7 @@
 Launch a full-stack VYTAL House platform that can support marketing, member acquisition, booking interest, vendor procurement, internal operations, and controlled launch planning.
 
 ## In Scope
-- Target flagship location record for 6000 Merriweather Drive, Columbia, MD 21044.
+- Target flagship location record for 9017 Mendenhall Court, Suite F, Columbia, MD 21045.
 - Public website for brand, services, memberships, science education, facility concept, and contact.
 - Local prototype login for role-based review.
 - Command portal for project-ready goals, risks, integrations, documents, and operational records.

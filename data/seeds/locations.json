@@ -1,18 +1,18 @@
 [
   {
-    "id": "location-merriweather-columbia",
+    "id": "location-mendenhall-columbia",
     "entity": "VYTAL House",
     "type": "launchLocation",
-    "name": "6000 Merriweather Drive",
+    "name": "9017 Mendenhall Court, Suite F",
     "status": "target",
     "owner": "operations",
     "updatedAt": "2026-06-21",
     "metadata": {
-      "street": "6000 Merriweather Drive",
+      "street": "9017 Mendenhall Court, Suite F",
       "city": "Columbia",
       "state": "MD",
-      "postalCode": "21044",
-      "fullAddress": "6000 Merriweather Drive, Columbia, MD 21044",
+      "postalCode": "21045",
+      "fullAddress": "9017 Mendenhall Court, Suite F, Columbia, MD 21045",
       "market": "Columbia, Maryland",
       "use": "Target flagship recovery and wellness club location",
       "gate": "Lease, zoning, utilities, permits, and tenant improvement terms require professional review before commitment"

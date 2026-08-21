@@ -1,19 +1,30 @@
 # VYTAL House
 
-Welcome to the **VYTAL House AI Operating System**. This repository serves as the digital command center for the premium recovery and wellness club located at 6000 Merriweather Drive, Columbia, MD 21044.
+Welcome to the **VYTAL House AI Operating System**. This repository is the
+isolated operating silo for the proposed VYTAL House flagship at 9017 Mendenhall
+Court, Suite F, Columbia, MD 21045, approximately 6,400 RSF.
 
-**Tagline:** Recharge. Recover. Evolve.
+**Enterprise platform:** Change Your State.
+**House working subline:** Recharge. Recover. Evolve.
 **Owners:** Chauncey Gardner and Kathy Ha
 
 ## Current Status: Prototype / Pre-Launch
 This system is currently in a safe, offline prototype mode. 
 **No real payments, vendor outreach, protected health data intake, or legal filings are executed without explicit approval.**
 
+The property remains pre-development and pre-opening. Zoning/use, parking,
+architecture, civil/ADA, permits, licensing, lending, construction, occupancy
+and opening are not represented as approved or complete.
+
 ## Design System
 - **Aesthetic:** Dark spacecraft-lounge
 - **Background:** `#07090D`
 - **Surfaces:** `#111722`, `#18202D`
-- **Accents:** Gold CTA (`#C8A46B`), Cyan Clinical Tech (`#7DE3FF`)
+- **Legacy accents:** Gold (`#C8A46B`) and cyan (`#7DE3FF`) remain in the
+  prototype pending migration to the enterprise black/silver/graphite/white
+  system with controlled prismatic accents.
+
+See [Enterprise alignment](docs/28_ENTERPRISE_ALIGNMENT.md) before public release.
 
 ## App Routes
 - `/` - Premium public website

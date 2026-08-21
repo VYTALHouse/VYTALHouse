@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "repository": "VYTALHouse",
+  "asOf": "2026-08-21",
+  "assets": [
+    {
+      "id": "VH-LEGACY-FLOORPLAN-001",
+      "filename": "public/images/vytal-floor-plan.png",
+      "subject": "Legacy conceptual floor plan",
+      "source": "legacy repository",
+      "owner": "VYTAL House",
+      "license": "internal provenance review required",
+      "project": "VYTAL House",
+      "stage": "provisional",
+      "approvalStatus": "human review required",
+      "approvedBy": null,
+      "approvedAt": null,
+      "destinations": ["development evidence"],
+      "supersedes": null
+    },
+    {
+      "id": "VH-LEGACY-INTERIOR-001",
+      "filename": "public/images/vytal-interior-reference.png",
+      "subject": "Legacy interior reference",
+      "source": "legacy repository",
+      "owner": "VYTAL House",
+      "license": "internal provenance review required",
+      "project": "VYTAL House",
+      "stage": "provisional",
+      "approvalStatus": "human review required",
+      "approvedBy": null,
+      "approvedAt": null,
+      "destinations": ["development evidence"],
+      "supersedes": null
+    }
+  ]
+}

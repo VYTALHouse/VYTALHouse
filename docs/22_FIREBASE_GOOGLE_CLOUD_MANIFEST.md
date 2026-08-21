@@ -35,7 +35,7 @@
 | Folder | Owner | Contents | Control |
 |---|---|---|---|
 | `01_Formation_Drafts` | owner | Draft entity and governance docs | Legal review before execution |
-| `02_Lease_Diligence` | operations | Site due diligence for 6000 Merriweather Drive | Broker/counsel review |
+| `02_Lease_Diligence` | operations | Site due diligence for 9017 Mendenhall Court, Suite F | Broker/counsel review |
 | `03_Clinical_Compliance` | clinical | Protocols, waivers, medical director docs | No public access |
 | `04_Vendor_Quotes` | operations | Equipment quotes and warranties | No vendor send without approval |
 | `05_Tech_Deployment` | admin | Firebase, GitHub, CI, release evidence | Secret-managed access |

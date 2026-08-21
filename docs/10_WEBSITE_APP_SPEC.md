@@ -4,7 +4,7 @@
 - Home: brand signal, hero, waitlist CTA, facility zones, membership snapshot.
 - Services: HBOT, IV/NAD+, red light, cryotherapy, sauna/cold plunge, float, compression.
 - Memberships: Core, Elite, Black comparison and waitlist capture.
-- Facility: conceptual floor plan, zone details, and target site context for 6000 Merriweather Drive, Columbia, MD 21044.
+- Facility: conceptual floor plan, zone details, and target site context for 9017 Mendenhall Court, Suite F, Columbia, MD 21045.
 - Science: source-backed educational pages with professional review disclaimer.
 - Contact: lead form and vendor inquiry route.
 

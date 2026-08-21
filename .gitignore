@@ -32,3 +32,4 @@ Thumbs.db
 
 # Generated QA scratch output
 quality/docx_render/
+.sites-runtime/

@@ -67,7 +67,7 @@ export default function HomePage() {
         <div className="hero-panel">
           <Image
             src="/images/vytal-floor-plan.png"
-            alt="VYTAL House conceptual floor plan at 6000 Merriweather Drive"
+            alt="VYTAL House conceptual floor plan at 9017 Mendenhall Court, Suite F"
             width={920}
             height={518}
             priority

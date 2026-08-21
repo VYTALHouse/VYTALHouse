@@ -1,7 +1,7 @@
 # 21 - Project Ready Goals
 
 ## Target Location
-- Address: 6000 Merriweather Drive, Columbia, MD 21044.
+- Address: 9017 Mendenhall Court, Suite F, Columbia, MD 21045.
 - Market: Columbia, Maryland recovery and wellness club.
 - Gate: lease, zoning, utilities, permits, tenant improvements, accessibility, fire/life safety, insurance, and medical-use suitability must be reviewed before commitment.
 
@@ -12,7 +12,7 @@ The VYTAL House package is project-ready when the local repo can run, validate, 
 | Goal | Owner | Status | Gate |
 |---|---|---|---|
 | Confirm ownership economics | owner | approval-needed | Formation |
-| Confirm Merriweather lease, zoning, utilities, and tenant improvements | operations | approval-needed | Lease |
+| Confirm Mendenhall lease, zoning, utilities, and tenant improvements | operations | approval-needed | Lease |
 | Secure medical director letter of intent | clinical | approval-needed | Medical |
 | Request formal equipment quotes | operations | quote-needed | Equipment |
 | Manifest Firebase staging project | admin | ready-draft | Technology |

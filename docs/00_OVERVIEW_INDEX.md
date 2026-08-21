@@ -4,7 +4,7 @@
 - Name: VYTAL House
 - Tagline: Recharge. Recover. Evolve.
 - Owners: Chauncey Gardner and Kathy Ha
-- Target location: 6000 Merriweather Drive, Columbia, MD 21044
+- Target location: 9017 Mendenhall Court, Suite F, Columbia, MD 21045
 - Silo: independent VYTAL House workspace
 
 ## What Was Manifested
