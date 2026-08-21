@@ -13,6 +13,7 @@ export default function Page() {
         <p className="hero-copy">Operations, quality score, launch readiness, Firebase readiness, and project gates.</p>
         <div className="hero-actions">
           <a className="pill-button primary" href="/portal">Open command portal</a>
+          <a className="pill-button" href="/admin/federation">Project federation</a>
           <a className="pill-button" href="/login">Role login</a>
         </div>
       </section>
