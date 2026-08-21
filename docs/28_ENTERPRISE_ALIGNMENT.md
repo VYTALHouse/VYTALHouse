@@ -4,7 +4,7 @@
 
 This repository remains the isolated VYTAL House operating application. The
 umbrella canon, federation registry and shared brand rules live in
-[VYTALEnterprise](https://github.com/ChaunDon5000/VYTALEnterprise).
+[VYTALEnterprise](https://github.com/VYTALHouse/VYTALEnterprise).
 
 ## Current site baseline
 
