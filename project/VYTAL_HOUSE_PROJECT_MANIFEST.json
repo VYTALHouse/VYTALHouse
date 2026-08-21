@@ -1,0 +1,140 @@
+{
+  "id": "vytal-house-project-federation-v1",
+  "entity": "VYTAL House",
+  "type": "project-federation",
+  "name": "VYTAL House Project Federation",
+  "status": "Draft",
+  "owner": "Chauncey Gardner and Kathy Ha",
+  "updatedAt": "2026-08-21",
+  "metadata": {
+    "umbrellaRepository": "ChaunDon5000/VYTALEnterprise",
+    "flagshipRepository": "ChaunDon5000/VYTALHouse",
+    "mode": "prototype-read-only",
+    "publicSafe": true,
+    "restrictedDataAllowed": false,
+    "sourcePolicy": "Every substantive cross-repository fact must retain source, stage, owner, date, conflict state and approval state.",
+    "repositories": [
+      {
+        "repository": "ChaunDon5000/VYTALEnterprise",
+        "domain": "enterprise",
+        "relationship": "umbrella-governance",
+        "stage": "active",
+        "priority": "P0",
+        "authority": "enterprise-governance-and-federation"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALHouse",
+        "domain": "health/house-operations",
+        "relationship": "flagship-execution",
+        "stage": "pre-development",
+        "priority": "P0",
+        "authority": "house-implementation-and-local-execution"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALHouse_com",
+        "domain": "health/house-public-web",
+        "relationship": "public-web-interface",
+        "stage": "planned",
+        "priority": "P1",
+        "authority": "public-site-release-and-content"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALPouches",
+        "domain": "products/pouches",
+        "relationship": "product-dependency",
+        "stage": "r-and-d",
+        "priority": "P2",
+        "authority": "formulation-testing-labels-claims-and-commercial-state"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALBranding",
+        "domain": "brand",
+        "relationship": "brand-dependency",
+        "stage": "system-build",
+        "priority": "P0",
+        "authority": "enterprise-brand-canon-and-creative-approvals"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALOperations",
+        "domain": "operations",
+        "relationship": "execution-dependency",
+        "stage": "system-build",
+        "priority": "P0",
+        "authority": "operating-procedures-launch-controls-and-workflows"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALCareers",
+        "domain": "people/careers",
+        "relationship": "workforce-dependency",
+        "stage": "planned",
+        "priority": "P1",
+        "authority": "career-architecture-and-recruiting"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALAI",
+        "domain": "ai",
+        "relationship": "ai-control-dependency",
+        "stage": "planned",
+        "priority": "P1",
+        "authority": "agent-contracts-retrieval-boundaries-and-evaluation"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALCRM",
+        "domain": "crm",
+        "relationship": "lifecycle-interface-dependency",
+        "stage": "planned",
+        "priority": "P1",
+        "authority": "crm-lifecycle-and-integration-architecture"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALApp",
+        "domain": "applications/member-operator",
+        "relationship": "application-interface-dependency",
+        "stage": "planned",
+        "priority": "P1",
+        "authority": "member-operator-application-architecture"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALIP",
+        "domain": "intellectual-property",
+        "relationship": "approval-gate",
+        "stage": "diligence",
+        "priority": "P0",
+        "authority": "ip-register-filing-workflow-and-counsel-handoff"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALPLLC",
+        "domain": "clinical-entity",
+        "relationship": "clinical-approval-gate",
+        "stage": "counsel-review-required",
+        "priority": "P0",
+        "authority": "clinical-independence-professional-governance-and-control-boundary"
+      },
+      {
+        "repository": "ChaunDon5000/VYTALMSO",
+        "domain": "management-services",
+        "relationship": "management-approval-gate",
+        "stage": "counsel-review-required",
+        "priority": "P0",
+        "authority": "non-clinical-management-scope-and-control-boundary"
+      },
+      {
+        "repository": "ChaunDon5000/FCGHoldings",
+        "domain": "holding-governance",
+        "relationship": "parent-governance-approval-gate",
+        "stage": "diligence",
+        "priority": "P0",
+        "authority": "holding-structure-ownership-entity-and-capital-policy"
+      }
+    ],
+    "launchCriticalDependencies": [
+      "facility-architecture-test-fit",
+      "civil-use-parking-ada",
+      "permitting-and-occupancy",
+      "mso-pllc-counsel-boundaries",
+      "holding-and-capital-governance",
+      "brand-master-and-token-approval"
+    ],
+    "nextImplementation": "Create a read-only Project Federation view in the VYTAL House owner/admin experience using this manifest as prototype data."
+  }
+}
